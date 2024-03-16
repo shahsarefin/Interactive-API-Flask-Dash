@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin: 0;
+      }
+      nav {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      .instructions {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .Usage {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/convert">Image Convert</a>
+      <a href="/generate_data">Data Generator</a>
+    </nav>
+
+    <div class="Usage">
+      <h1>Interactive API 1</h1>
+      <h2>Image Converter & Data Generator</h2>
+      <p>
+        This is a simple web application that allows you to convert images from
+        one format to another and generate fake data for testing purposes.
+      </p>
+    </div>
+    <section class="instructions">
+      <h2>Usage Instructions</h2>
+
+      <div>
+        <h3>Image Conversion</h3>
+        <p>
+          Convert JPEG images to PNG or BMP formats. Upload your image and
+          select the desired output format.
+        </p>
+        <ol>
+          <li>Navigate to the <strong>Image Convert</strong> page.</li>
+          <li>Upload your JPEG image and select the desired output format.</li>
+          <li>Click the "Convert" button.</li>
+        </ol>
+      </div>
+
+      <div>
+        <h3>Fake Data Generation</h3>
+        <p>
+          Generate fake datasets for personal, financial, contact, employment,
+          and online information.
+        </p>
+        <ol>
+          <li>Go to the <strong>Data Generator</strong> page.</li>
+          <li>Select the type of data and the quantity.</li>
+          <li>Submit the form to generate data.</li>
+          <li>
+            Json file will be automatically downloaded through your browser.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </body>
+</html>

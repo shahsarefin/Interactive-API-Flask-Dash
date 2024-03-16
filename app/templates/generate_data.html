@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dataset Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin: 0;
+      }
+      nav {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      input[type="submit"],
+      select {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/convert">Image Convert</a>
+      <a href="/generate_data">Data Generator</a>
+    </nav>
+    <h1>Select a Dataset to Generate Fake Data</h1>
+    <form action="/generate_data" method="post">
+      <label for="dataset">Choose a dataset:</label>
+      <select id="dataset" name="dataset">
+        <option value="personal_info">Personal Information</option>
+        <option value="contact_details">Contact Details</option>
+        <option value="employment_data">Employment Data</option>
+        <option value="online_activity">Online Activity</option>
+        <option value="financial_information">Financial Information</option>
+      </select>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="100" />
+      <input type="submit" value="Generate Data" />
+    </form>
+  </body>
+</html>

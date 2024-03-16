@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin: 0;
+      }
+      nav {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      input[type="submit"],
+      select {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/convert">Image Convert</a>
+      <a href="/generate_data">Data Generator</a>
+    </nav>
+    <h1>Convert Your Image</h1>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+      <label for="image">Upload image:</label>
+      <input type="file" id="image" name="image" required />
+      <label for="output_format">Output format:</label>
+      <select id="output_format" name="output_format">
+        <option value="PNG">PNG</option>
+        <option value="BMP">BMP</option>
+      </select>
+      <input type="submit" value="Convert" />
+    </form>
+
+    {% if converted_image %}
+    <h2>Converted Image</h2>
+    <img src="{{ converted_image }}" alt="Converted Image" />
+    <p>
+      Your image has been converted to the {{ session.get('output_format',
+      '').upper() }} format and is shown above.
+    </p>
+    {% endif %}
+  </body>
+</html>
